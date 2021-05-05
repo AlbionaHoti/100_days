@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <img src="https://image4.owler.com/logo/coding-dojo_owler_20161201_092020_original.png" width="112"
+            height="28">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+     >
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="{% url 'jobs:dashboard' %}" class="button is-gray is-small is-outlined">Back</a>
+              <a href="" class="navbar-item button is-gray is-medium is-outlined">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="column is-half">
+
+        <form action="">
+        <div class="box">
+          <h1 class="title">
+            {{ job.title }}
+          </h1>
+          <p class="subtitle">
+            {{ job.description }} <strong></strong>!
+          </p>
+          
+          <p class="subtitle">
+            Location: {{ job.location }} <strong></strong>!
+          </p>
+          
+          <p class="subtitle">
+            Posted on: {{ job.created_at }} <strong></strong>!
+          </p>
+  
+        </div>
+        <a href="{% url 'jobs:registerMyJob' job.id %}" class="button is-gray is-small is-outlined">Add to my jobs</a>
+      </form>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

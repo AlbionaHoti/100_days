@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    {% include 'main/nav.html' %}
+    <section class="section">
+      <div class="columns">
+        <div class="column">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><abbr title="Position">Job</abbr></th>
+                <th>Location</th>
+                <th><abbr title="Played">Action</abbr></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th><abbr title="Position">Job</abbr></th>
+                <th>Location</th>
+                <th><abbr title="Played">Action</abbr></th>
+              </tr>
+            </tfoot>
+            <tbody>
+              {% for job in jobs %}
+              <tr>
+                <th>{{ job.title }}</th>
+                <td>{{ job.location }}<strong></strong></td>
+                <td>
+                  <a href="{% url 'jobs:view' job.id %}" class="button is-text is-outlined">View</a>
+                  <a href="{% url 'jobs:registerMyJob' job.id %}" class="button is-text is-outlined">Add</a>
+                  <a href="{% url 'jobs:editJob' job.id %}" class="button is-text is-outlined">Edit</a>
+                  <a href="{% url 'jobs:remove' job.id %}" class="button is-text is-outlined">Cancel</a>
+                {% if job.job_by_user == request.session.user_id %}
+                {% endif  %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+        <div class="column">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><abbr title="Position">Job</abbr></th>
+                <th>Location</th>
+                <th><abbr title="Played">Action</abbr></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th><abbr title="Position">Job</abbr></th>
+                <th>Location</th>
+                <th><abbr title="Played">Action</abbr></th>
+              </tr>
+            </tfoot>
+            <tbody>
+              {% for job in jobs_by_user %}
+              <tr>
+                <th>{{ job.job.title }}</th>
+                <td>{{ job.job.location }}<strong></strong></td>
+                <td>
+                    <a href="{% url 'jobs:view' job.job.id %}" class="button is-text is-outlined">View</a>
+                    <a href="{% url 'jobs:done' job.job.id %}" class="button is-text is-outlined">Done</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

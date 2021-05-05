@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-ThinItalic.eot');
+  src: local('Cako Thin Italic'), local('Cako-ThinItalic'),
+    url('Cako-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('Cako-ThinItalic.woff2') format('woff2'),
+    url('Cako-ThinItalic.woff') format('woff'),
+    url('Cako-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-Regular.eot');
+  src: local('Cako Regular'), local('Cako-Regular'),
+    url('Cako-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Cako-Regular.woff2') format('woff2'),
+    url('Cako-Regular.woff') format('woff'),
+    url('Cako-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-Black.eot');
+  src: local('Cako Black'), local('Cako-Black'),
+    url('Cako-Black.eot?#iefix') format('embedded-opentype'),
+    url('Cako-Black.woff2') format('woff2'),
+    url('Cako-Black.woff') format('woff'),
+    url('Cako-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-Thin.eot');
+  src: local('Cako Thin'), local('Cako-Thin'),
+    url('Cako-Thin.eot?#iefix') format('embedded-opentype'),
+    url('Cako-Thin.woff2') format('woff2'), url('Cako-Thin.woff') format('woff'),
+    url('Cako-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-RegularItalic.eot');
+  src: local('Cako Regular Italic'), local('Cako-RegularItalic'),
+    url('Cako-RegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('Cako-RegularItalic.woff2') format('woff2'),
+    url('Cako-RegularItalic.woff') format('woff'),
+    url('Cako-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cako';
+  src: url('Cako-BlackItalic.eot');
+  src: local('Cako Black Italic'), local('Cako-BlackItalic'),
+    url('Cako-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('Cako-BlackItalic.woff2') format('woff2'),
+    url('Cako-BlackItalic.woff') format('woff'),
+    url('Cako-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
